@@ -34,9 +34,9 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule);
 ```
-But no where does the Angular CLI build tool readily give, via quick instruction, a way to a configuration file of your choosing and structure, for example if you have multiple service urls, Twitter and Facebook APIs, CDN urls etc
+But no where does the Angular CLI build tool readily give, via quick instruction, a way to a configuration file of your choosing and structure, for example, if you have multiple service urls, Twitter and Facebook APIs, CDN urls etc
 
-There is [easy-webpack](https://github.com/easy-webpack/core), which seems high quality, very generous, lots of templates, still no way directly apparent way to have a configuation available in a Angular2 Typescript app.
+There is [easy-webpack](https://github.com/easy-webpack/core), which seems high quality, very generous, lots of templates, still, no directly apparent way to have a configuation available to a Angular2 Typescript app.
 
 There is [this](https://github.com/AngularClass/angular2-webpack-starter/wiki/How-to-pass-environment-variables%3F) which is great and and has Typescript Type Definition explanation, but reading the solution over, if feels like DefinePlugin is boxing me into Node process.env naming conventions, I didn't get the impression I could create my on environment variables of my choosen names or a hiearchy structure of configuration that is meangingful to my domain or my team.
 
@@ -44,7 +44,7 @@ All I wanted was a damn environment varying configuration "instantiation" (is it
 
 I do not want multiple webpack.config files, I do want to merge multiple config files, I do not want multiple Typescript environment.ts files, and the DefinePlugin or the EnvironmentPlugin do not give me, in a straight foward, quick manner, anything available in a Typescript app.
 
-**I want to load a different .json file depending on my env webpack cmd argument!!!**
+**I want to load a environment.json file depending on my env webpack cmd argument and Angular2 Typescript app can read anywhere any time!!!**
 
 yet-another-angular2-bolerplate repo contains a simple solution to environment variables/configuration for a Typescript app, that I have not been able to find anywhere on the internets.
 
