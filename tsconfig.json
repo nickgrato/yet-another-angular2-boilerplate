@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "target": "es5", //most browsers currently understand this version of Javascript
+        "experimentalDecorators": true, //Angular2 uses Component,Injectable etc
+        "emitDecoratorMetadata": true //Required for Angular2 to use the metadata in our components
+        //"sourceMap": true
+    }
+}

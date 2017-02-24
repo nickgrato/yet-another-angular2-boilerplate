@@ -1,0 +1,8 @@
+{
+    "services": [
+        {
+            "name": "account",
+            "url": "accounts.tso.com"
+        }
+    ]
+}
