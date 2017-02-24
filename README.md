@@ -36,9 +36,9 @@ But no where does the Angular CLI build tool readily give quick instruction on h
 
 There is [easy-webpack](https://github.com/easy-webpack/core), which seems high quality, very generous, lots of templates, still no way to have a configuation easily available in a Angular2 Typescript app.
 
-There is [this](https://github.com/AngularClass/angular2-webpack-starter/wiki/How-to-pass-environment-variables%3F) oh thanks I get like one environment variable: API_URL, ya that is all I need.
+There is [this](https://github.com/AngularClass/angular2-webpack-starter/wiki/How-to-pass-environment-variables%3F) which is great and and has Typescript Type Definition explanation, but reading the solution over, if feels like DefinePlugin is boxing me into Node process.env naming conventions, I didn't get the impression I could create my on environment variable or a hiearchy structure of configuration that meangingful to my domain or my team.
 
-All I wanted was a damn environment dependent configuration "instantiation" (is it ok to use that word with Javascript? lol), loaded with some enviroment values, be it a (service, constant, whatever) injected, or globally available in my Angular2 Typescript app and still have Typescript compile. 
+All I wanted was a damn environment varying configuration "instantiation" (is it ok to use that word with Javascript? lol), loaded with some enviroment specific values, be it a (service, constant, whatever) injected, or globally available in my Angular2 Typescript app and still have Typescript compile and have an easy way to define the configuration with complex types and not use a bunch of plugins are read alot of ALL_CAPS tutorials on environment variables that were connected to Node.env.
 
 I do not want multiple webpack.config files, I do want to merge multiple config files, I do not want multiple environment.ts files, and the DefinePlugin or the EnvironmentPlugin do not give me, in a straight foward, quick manner, anything available in a Typescript app.
 
