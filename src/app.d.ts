@@ -6,6 +6,7 @@ declare module App {
   }
 
   export interface Configuration {
+    isDev: Boolean
     services: Service[];
   }
 }

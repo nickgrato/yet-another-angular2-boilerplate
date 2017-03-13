@@ -5,8 +5,7 @@
     "build": "webpack --progress --colors",
     "build-prd": "webpack -p --progress --colors --env.env prd",
     "postinstall": "typings install",
-    "tsc": "tsc --rootDir src --outDir dist",
-    "serve": "webpack-dev-server --inline --progress --colors"
+    "serve": "webpack-dev-server --inline --progress --colors --env.env prd"
   },
   "dependencies": {
     "@angular/common": "2.0.1",
@@ -30,6 +29,7 @@
     "typescript": "^2.2.1",
     "typings": "^2.1.0",
     "webpack": "^2.2.1",
+    "webpack-del-plugin": "0.0.1",
     "webpack-dev-server": "^2.4.1",
     "webpack-rev-replace-plugin": "^0.1.1"
   }

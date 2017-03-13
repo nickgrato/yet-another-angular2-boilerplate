@@ -4,5 +4,6 @@
             "name": "account",
             "url": "localhost"
         }
-    ]
+    ],
+    "isDev": true
 }
