@@ -9,6 +9,8 @@ plenty of Stackoverflow answers saying to use the [DefinePlugin or the Environme
 that announce a next coming segment on environment variables/configurations [but never gets around to it](https://youtu.be/lPhZW8ZyUA4?t=484).
 
 Solutions that use multiple webpack.config.js files and webpack-merge plugin, multiple webpack.configs?!! Is it ok to duplicate even this for multiple webpack.config files?:
+
+```javascript
 var webpack = require('webpack'),
     htmlPlugin = require('html-webpack-plugin'),
     revPlugin = require('webpack-rev-replace-plugin'),
@@ -16,8 +18,8 @@ var webpack = require('webpack'),
     path = require('path'),
     extendedDefinePlugin = require('extended-define-webpack-plugin'),
     webpackDelPlugin = require('webpack-del-plugin');
-    
-Not to me it isn't, I get, use webpack-merge to have a core webpack.config.js and then environment specific ones, what a pain in the ass. I never had more than one gulp.js or grunt.js file!
+```    
+I do not think this is ok, I get it, use webpack-merge to have a core webpack.core.config.js and then environment specific ones, what a pain in the ass. I never had more than one gulp.js or grunt.js file!
 
 Angular CLI has a [build tool](https://github.com/angular/angular-cli/wiki/build) that works with Typescript and conceptually you can see what it does from this main.ts snippet:
 ```javascript
@@ -32,13 +34,17 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule);
 ```
-But no where does the Angular CLI build tool readily give quick instruction on how to have a Configuration file of your choosing and structure, for example if you have multiple service urls, Twitter and Facebook APIs, CDN urls etc
+But no where does the Angular CLI build tool readily give, via quick instruction, a way to a configuration file of your choosing and structure, for example, if you have multiple service urls, Twitter and Facebook APIs, CDN urls etc
 
-There is [easy-webpack](https://github.com/easy-webpack/core), which seems high quality, very generous, lots of templates, still no way to have a configuation easily available in a Angular2 Typescript app.
+There is [easy-webpack](https://github.com/easy-webpack/core), which seems high quality, very generous, lots of templates, still, no directly apparent way to have a configuation available to a Angular2 Typescript app.
 
-All I wanted was a damn environment dependent configuration "instantiation" (is it ok to use that word with Javascript? lol), loaded with some enviroment values, be it a (service, constant, whatever) injected, or globally available in my Angular2 Typescript app and still have Typescript compile. 
+There is [this](https://github.com/AngularClass/angular2-webpack-starter/wiki/How-to-pass-environment-variables%3F) which is great and and has Typescript Type Definition explanation, but reading the solution over, if feels like DefinePlugin is boxing me into Node process.env naming conventions, I didn't get the impression I could create my on environment variables of my choosen names or a hiearchy structure of configuration that is meangingful to my domain or my team.
 
-I do not want multiple webpack.config files, I do want to merge multiple config files, I do not want multiple environment.ts files, and the DefinePlugin or the EnvironmentPlugin do not give me, in a straight foward, quick manner, anything available in a Typescript app.
+All I wanted was a damn environment varying configuration "instantiation" (is it ok to use that word with Javascript? lol), loaded with some enviroment specific values, be it a (service, constant, whatever) injected, or globally available in my Angular2 Typescript app and still have Typescript compile and have an easy way to define the configuration with complex types and not use a bunch of plugins or read alot of ALL_CAPS tutorials on environment variables that were connected to Node.env process in one way or another.
+
+I do not want multiple webpack.config files, I do want to merge multiple config files, I do not want multiple Typescript environment.ts files, and the DefinePlugin or the EnvironmentPlugin do not give me, in a straight foward, quick manner, anything available in a Typescript app.
+
+**I want to load a environment.json file depending on my env webpack cmd argument and Angular2 Typescript app can read anywhere any time!!!**
 
 yet-another-angular2-bolerplate repo contains a simple solution to environment variables/configuration for a Typescript app, that I have not been able to find anywhere on the internets.
 
