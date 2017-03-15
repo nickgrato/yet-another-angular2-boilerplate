@@ -27,7 +27,8 @@ module.exports = function (env) {
         },
         module: {
             loaders: [
-                { test: /\.ts$/, loader: 'ts-loader' },
+                { test: /\.html$/, use: 'raw-loader' },
+                { test: /\.ts$/, loaders: [ 'ts-loader' ,'angular2-template-loader'] },
                 {
                 test: /\.scss$/,
                 exclude: /node_modules/,
