@@ -1,6 +1,6 @@
-
-h1{
-    color: cornflowerblue;
-}
-
-
+@import './helpers/_Dir-helper.scss';
+@import './components/_Dir-components.scss';
+@import './base/_Dir-base.scss';
+@import './layout/_Dir-layout.scss';
+@import './pages/_Dir-pages.scss';
+@import './vendors-extensions/_Dir-vendors.scss';
