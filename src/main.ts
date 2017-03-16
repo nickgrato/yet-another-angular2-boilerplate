@@ -4,7 +4,10 @@ import 'zone.js/dist/zone'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/core/core.module';
 import { enableProdMode } from '@angular/core';
+
+//CSS STYLES
 import  './app/scss/_scssDir.scss'
+import './styles';
 
 if (!AppConfig.isDev) {
     enableProdMode();
