@@ -8,6 +8,7 @@ import { enableProdMode } from '@angular/core';
 //CSS STYLES
 import './styles';
 
+
 if (!AppConfig.isDev) {
     enableProdMode();
 }

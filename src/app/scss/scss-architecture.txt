@@ -38,9 +38,9 @@ sass/
 |   |– _admin.scss       # Admin theme 
 |   ...                  # Etc… 
 | 
-|– vendors/ 
+|– vendors-extensions/
 |   |– _bootstrap.scss   # Bootstrap 
-|   |– _jquery-ui.scss   # jQuery UI 
+|   |– _bootstrap-ui.scss   # bootsrap UI 
 |   ...                  # Etc… 
 | 
 | 
