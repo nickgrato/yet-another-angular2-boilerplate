@@ -6,7 +6,6 @@ import { AppModule } from './app/core/core.module';
 import { enableProdMode } from '@angular/core';
 
 //CSS STYLES
-import  './app/scss/_scssDir.scss'
 import './styles';
 
 if (!AppConfig.isDev) {
