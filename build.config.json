@@ -5,7 +5,7 @@
   "buildjs": "app.bundle.[hash:6].js",
   "buildcss": "bundle.css",
   "index": "index.html",
-  "port": 8080,
+  "port": 8000,
   "envs": "./envs/",
   "appConfig": "app.config.{env}.json",
   "js": [

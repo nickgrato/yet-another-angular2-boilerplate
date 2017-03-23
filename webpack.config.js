@@ -5,6 +5,7 @@ var webpack = require('webpack'),
     path = require('path'),
     extendedDefinePlugin = require('extended-define-webpack-plugin'),
     webpackDelPlugin = require('webpack-del-plugin');
+    OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = function (env) {
     const ROOT_DIR = path.resolve(__dirname);
@@ -66,7 +67,8 @@ module.exports = function (env) {
             new extendedDefinePlugin({
                 AppConfig: require(appConfigPath)
             }),
-            new webpackDelPlugin({match: path.join(DIST_DIR, '*.*')})
+            new webpackDelPlugin({match: path.join(DIST_DIR, '*.*')}),
+            new OpenBrowserPlugin({ url: 'http://localhost:8080' }) 
         ]
     }
 }
