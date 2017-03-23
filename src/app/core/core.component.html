@@ -1,4 +1,16 @@
 <ts-main-nav></ts-main-nav>
+<div class="example-config">
+        <h4>Status: {{ status }}</h4>
+      </div>
+
+      <kendo-dialog *ngIf="opened" title="Action required" (close)="onClose()">
+        <p style="margin: 30px; text-align: center;">Do you accept?</p>
+
+        <kendo-dialog-actions>
+          <button kendoButton (click)="onAccept()">Yes</button>
+          <button kendoButton (click)="onDecline()">No</button>
+        </kendo-dialog-actions>
+      </kendo-dialog>
   <div class="example-wrapper">
         <div class="row">
             <div class="col-xs-12 col-sm-6 example-col">
@@ -31,3 +43,5 @@
             </div>
         </div>
     </div>
+    
+    <button kendoButton [imageUrl]="'http://demos.telerik.com/kendo-ui/content/shared/icons/sports/snowboarding.png'">Snowboarding</button>

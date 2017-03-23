@@ -14,6 +14,15 @@ export class AppComponent {
     public max: number = 10;
     public smallStep: number = 1;
 
+    onButtonClick() {
+        this.title = 'Hello from Kendo UI!';
+    }
+    public status = "open";
+    public opened: boolean = true;
+    public onClose() { this.opened = false;
+      console.log('closing'); }
+    public onAccept() { this.status = "accepted"; }
+    public onDecline() { this.status = "declined"; }
     
 }
 

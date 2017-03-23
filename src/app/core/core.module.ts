@@ -6,6 +6,9 @@ import { FormsModule } from '@angular/forms';//example ng-model
 
 // Import the InputsModule...
 import { InputsModule } from '@progress/kendo-angular-inputs';
+import { DialogModule } from '@progress/kendo-angular-dialog';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+
 
 
 //navigation
@@ -16,7 +19,9 @@ import { MainNavComponent } from './nav/nav.component';
   imports:      [ BrowserModule,
                   FormsModule, 
                   NgbModule.forRoot(),
-                  InputsModule],
+                  InputsModule,
+                  DialogModule,
+                  ButtonsModule],
   declarations: [ AppComponent,
                   MainNavComponent ],
   bootstrap:    [ AppComponent ]
