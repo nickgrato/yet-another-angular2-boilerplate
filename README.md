@@ -6,4 +6,4 @@ the files. Follow steps here to create a login, and continue the steps to login.
 
 2) Command Line : 'npm install'
 
-3) Command Line : 'npm run serve', localhost 8080 should pop up automatically, if not go there manually.
+3) Command Line : 'npm run serve', http://localhost:8080/ should pop up automatically, if not go there manually.
