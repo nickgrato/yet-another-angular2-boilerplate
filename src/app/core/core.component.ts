@@ -6,13 +6,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent { 
     name = 'Angular'; 
-    title = ''
+    title = '';
+    testClass = 'test-text';
   
     public sliderValue: number = 5;
     public numericValue: number = 5;
     public min: number = 0;
     public max: number = 10;
     public smallStep: number = 1;
+
+   
 
     onButtonClick() {
         this.title = 'Hello from Kendo UI!';

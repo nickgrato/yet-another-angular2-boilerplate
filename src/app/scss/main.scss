@@ -5,4 +5,12 @@
 @import './pages/_Dir-pages.scss';
 @import './vendors-extensions/_Dir-vendors.scss';
 
+
+//test stuff erase later. 
+$accent: #ff69b4;
+
+.test-text{
+    color:#ff0000;
+}
+//need to update this to node modules. 
 @import url(http://www.telerik.com/kendo-angular-ui/npm/node_modules//@progress/kendo-theme-default/dist/all.css);
